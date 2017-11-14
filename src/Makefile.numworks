@@ -20,3 +20,4 @@ clean:
 libgiac.a: $(OBJS) 
 	$(PREFIX)ar rcs libgiac.a $(OBJS) 
 	$(PREFIX)ranlib libgiac.a
+	$(PREFIX)objcopy --redefine-sym mp_init=mp_tm_init $@
